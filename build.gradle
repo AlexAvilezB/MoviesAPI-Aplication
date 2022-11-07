@@ -5,6 +5,11 @@ plugins {
     id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
 }
 
+ext {
+    version_retrofit = "2.9.0"
+    version_moshi = "1.8.0"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
