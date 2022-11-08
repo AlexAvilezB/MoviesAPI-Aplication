@@ -6,8 +6,9 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
-val BASE_URL = "https://api.themoviedb.org/3/tv/top_rated?api_key=b7660a4fd30a46bf2866abe66bdd5194" //url de la api que se consume
+val BASE_URL = "https://api.themoviedb.org/3/" //url de la api que se consume
 
 //Instancia de moshi
 //Se pasa un factory, es decir que toma el json y lo convierte a una clase kt
@@ -25,7 +26,7 @@ private val retrofit = Retrofit.Builder()
 
 interface ApiService {
 
-    @GET("results")
+    @GET("tv/top_rated?api_key=b7660a4fd30a46bf2866abe66bdd5194")
     fun getTvShows(): Call<List<TvShow>>//Devuelve una lista de usuarios
 }
 
