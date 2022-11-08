@@ -19,23 +19,23 @@ class MainActivity : AppCompatActivity() {
 
 
         Api.retrofitService.getTvShows().enqueue(
-            object: Callback<List<TvShow>> {
-                override fun onResponse(call: Call<List<TvShow>>, response: Response<List<TvShow>>) {
+            object: Callback<TopRatedResponse> {
+                override fun onResponse(call: Call<TopRatedResponse>, response: Response<TopRatedResponse>) {
                     Log.i("Retrofit", response.body().toString())
 
-                    response.body()?.let {
+                    response.body()?.results?.let {
                         configureTvShowsList(it)
                     }
                 }
 
-                override fun onFailure(call: Call<List<TvShow>>, t: Throwable) {
+                override fun onFailure(call: Call<TopRatedResponse>, t: Throwable) {
                     Log.i("Retrofit", t.message.toString())
                 }
             }
         )
     }
 
-    fun configureTvShowsList(data: List<TvShow>) {
+    fun configureTvShowsList(data: List<TVShow>) {
         val adapter = TvShowAdapter(dataSet = data.toTypedArray())
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
