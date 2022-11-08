@@ -10,6 +10,8 @@ import retrofit2.http.Query
 
 val BASE_URL = "https://api.themoviedb.org/3/" //url de la api que se consume
 
+const val TOKEN = "b7660a4fd30a46bf2866abe66bdd5194"
+
 //Instancia de moshi
 //Se pasa un factory, es decir que toma el json y lo convierte a una clase kt
 //con el meto build se inicializa
@@ -26,8 +28,8 @@ private val retrofit = Retrofit.Builder()
 
 interface ApiService {
 
-    @GET("tv/top_rated?api_key=b7660a4fd30a46bf2866abe66bdd5194")
-    fun getTvShows(): Call<List<TvShow>>//Devuelve una lista de usuarios
+    @GET("tv/top_rated?api_key=${TOKEN}")
+    fun getTvShows(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
 }
 
 object Api {

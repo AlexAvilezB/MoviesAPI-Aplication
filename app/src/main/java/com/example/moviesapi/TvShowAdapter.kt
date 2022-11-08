@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TvShowAdapter(private val dataSet: Array<TvShow>) : RecyclerView.Adapter<TvShowViewHolder>() {
+class TvShowAdapter(private val dataSet: Array<TVShow>) : RecyclerView.Adapter<TvShowViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.tvshows_items, parent, false)
