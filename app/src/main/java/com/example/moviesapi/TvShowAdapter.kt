@@ -2,7 +2,6 @@ package com.example.moviesapi
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import coil.load
 import androidx.recyclerview.widget.RecyclerView
 
 class TvShowAdapter(private val dataSet: Array<TVShow>) : RecyclerView.Adapter<TvShowViewHolder>() {
