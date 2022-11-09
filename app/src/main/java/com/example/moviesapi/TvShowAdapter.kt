@@ -1,10 +1,13 @@
 package com.example.moviesapi
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TvShowAdapter(private val dataSet: Array<TVShow>
+class TvShowAdapter(
+    private val dataSet: Array<TVShow>,
+    private val onTap: (Int) -> Unit,
 ) : RecyclerView.Adapter<TvShowViewHolder>() {
 
 
@@ -22,6 +25,11 @@ class TvShowAdapter(private val dataSet: Array<TVShow>
         holder.nameTextView.text = dataSet[position].name
         holder.firstAirTextView.text = dataSet[position].first_air_date
 
+        holder.itemView.setOnClickListener {
+            Log.i("OnTap", "Did tap on item with id: " + item.id)
+
+            onTap(item.id)
+        }
     }
 
     override fun getItemCount(): Int {

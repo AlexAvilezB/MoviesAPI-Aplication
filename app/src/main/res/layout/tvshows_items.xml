@@ -25,7 +25,6 @@
                 android:id="@+id/tvShowImage"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:onClick="click_serie"
                 android:scaleType="fitXY"
                 tools:srcCompat="@tools:sample/avatars" />
 

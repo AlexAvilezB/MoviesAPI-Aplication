@@ -43,7 +43,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun configureTvShowsList(data: List<TVShow>) {
-        val adapter = TvShowAdapter(dataSet = data.toTypedArray())
+        val adapter = TvShowAdapter(dataSet = data.toTypedArray()) { selectedId ->
+            val miIntent = Intent(this, ShowDetailActivity::class.java)
+            // Este parametro lo debe recuperar en la otra activity
+            miIntent.putExtra("showId", selectedId)
+            startActivity(miIntent)
+
+//            click_serie()
+        }
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
         val layoutManager = GridLayoutManager(this, 2)
