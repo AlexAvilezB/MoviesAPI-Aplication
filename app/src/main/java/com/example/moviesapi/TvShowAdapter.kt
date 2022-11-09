@@ -4,7 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class TvShowAdapter(private val dataSet: Array<TVShow>) : RecyclerView.Adapter<TvShowViewHolder>() {
+class TvShowAdapter(private val dataSet: Array<TVShow>
+) : RecyclerView.Adapter<TvShowViewHolder>() {
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.tvshows_items, parent, false)
@@ -19,6 +21,7 @@ class TvShowAdapter(private val dataSet: Array<TVShow>) : RecyclerView.Adapter<T
         holder.setTVShow(item)
         holder.nameTextView.text = dataSet[position].name
         holder.firstAirTextView.text = dataSet[position].first_air_date
+
     }
 
     override fun getItemCount(): Int {

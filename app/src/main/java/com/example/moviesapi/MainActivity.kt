@@ -1,8 +1,11 @@
 package com.example.moviesapi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.ImageView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -46,7 +49,12 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = GridLayoutManager(this, 2)
 
         recyclerView.layoutManager = layoutManager
-
         recyclerView.adapter = adapter
     }
+
+    fun click_serie() {
+        val miIntent = Intent(this, tvShowDetails::class.java)
+        startActivity(miIntent)
+    }
+
 }
