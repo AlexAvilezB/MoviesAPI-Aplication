@@ -3,12 +3,16 @@ package com.example.moviesapi
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,6 +43,9 @@ class MainActivity : AppCompatActivity() {
         val adapter = TvShowAdapter(dataSet = data.toTypedArray())
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
+        val layoutManager = GridLayoutManager(this, 2)
+
+        recyclerView.layoutManager = layoutManager
 
         recyclerView.adapter = adapter
     }
