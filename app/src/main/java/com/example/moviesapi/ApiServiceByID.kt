@@ -8,9 +8,9 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-val BASE_URL = "https://api.themoviedb.org/3/" //url de la api que se consume
+val BASE_URL2 = "https://api.themoviedb.org/3/tv/${Constants.SERIES_ID}/" //url de la api que se consume
 
-const val TOKEN = "b7660a4fd30a46bf2866abe66bdd5194"
+const val TOKEN2 = "b7660a4fd30a46bf2866abe66bdd5194"
 
 //Instancia de moshi
 //Se pasa un factory, es decir que toma el json y lo convierte a una clase kt
@@ -23,18 +23,18 @@ private val moshi = Moshi.Builder()
 private val retrofit = Retrofit.Builder()
     //.addConverterFactory(ScalarsConverterFactory.create())
     .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl(BASE_URL)
+    .baseUrl(BASE_URL2)
     .build()
 
-interface ApiService {
+interface ApiServiceByID {
 
-    @GET("tv/top_rated?api_key=${TOKEN}")
-    fun getTvShows(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
+    @GET("?api_key=${TOKEN}")
+    fun getTvShowsByID(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
 
 }
 
-object Api {
-    val retrofitService : ApiService by lazy {
-        retrofit.create(ApiService::class.java)
+object ApiByID {
+    val retrofitService : ApiServiceByID by lazy {
+        retrofit.create(ApiServiceByID::class.java)
     }
 }
