@@ -11,7 +11,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/serie_backdrop"
+            android:id="@+id/series_backdrop"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/backdrop_guideline"
@@ -33,7 +33,7 @@
             app:layout_constraintTop_toBottomOf="@id/backdrop_guideline">
 
             <ImageView
-                android:id="@+id/ShowImage"
+                android:id="@+id/ShowPoster"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
