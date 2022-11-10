@@ -10,7 +10,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/tvShow_item"
         android:layout_width="150dp"
-        android:layout_height="315dp"
+        android:layout_height="280dp"
         android:layout_margin="15dp"
         android:elevation="10dp"
         app:cardCornerRadius="10dp">
@@ -31,13 +31,14 @@
             <TextView
                 android:id="@+id/name_textView"
                 android:layout_width="134dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_margin="8dp"
-                android:gravity="center"
-                android:text="Titulo"
-                android:textSize="16sp"
                 android:fontFamily="@font/mulish_bold"
-                android:textColor="@color/card_text"/>
+                android:textAlignment="center"
+                android:text="Titulo"
+                android:gravity="center"
+                android:textColor="@color/card_text"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
