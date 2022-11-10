@@ -8,7 +8,6 @@ import com.bumptech.glide.Glide
 
 class TvShowViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
     val nameTextView: TextView = itemView.findViewById(R.id.name_textView)
-    val firstAirTextView: TextView = itemView.findViewById(R.id.firstEmision_textView)
     val posterPathImageView: ImageView = itemView.findViewById(R.id.tvShowImage)
 
 

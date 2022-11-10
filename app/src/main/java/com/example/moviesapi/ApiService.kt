@@ -30,6 +30,10 @@ interface ApiService {
 
     @GET("tv/top_rated?api_key=${TOKEN}")
     fun getTvShows(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
+
+    //@GET("tv/1396?api_key=${TOKEN}")
+    //fun getTVShowById(): Call<List<TvShowIdResponse>>
+
 }
 
 object Api {

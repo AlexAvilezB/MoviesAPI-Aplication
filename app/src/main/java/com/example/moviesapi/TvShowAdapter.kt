@@ -23,12 +23,12 @@ class TvShowAdapter(
 
         holder.setTVShow(item)
         holder.nameTextView.text = dataSet[position].name
-        holder.firstAirTextView.text = dataSet[position].first_air_date
 
         holder.itemView.setOnClickListener {
             Log.i("OnTap", "Did tap on item with id: " + item.id)
 
             onTap(item.id)
+
         }
     }
 
