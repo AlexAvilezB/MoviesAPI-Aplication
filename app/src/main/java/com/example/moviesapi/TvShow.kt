@@ -3,7 +3,6 @@ package com.example.moviesapi
 import com.squareup.moshi.Json
 
 data class TvShowIdResponse (
-    val tv_id: Int,
     val name: String,
     val backdrop_path: String,
     val poster_path: String,

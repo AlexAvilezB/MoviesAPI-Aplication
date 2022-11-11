@@ -6,6 +6,7 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 val BASE_URL = "https://api.themoviedb.org/3/" //url de la api que se consume
@@ -30,6 +31,9 @@ interface ApiService {
 
     @GET("tv/top_rated?api_key=${TOKEN}")
     fun getTvShows(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
+
+    @GET("tv/{show}?api_key=${TOKEN}")
+    fun getTvShowsByID(@Path("show") show: Int): Call<TvShowIdResponse> // Devuelve una objeto con el detalle
 
 }
 
