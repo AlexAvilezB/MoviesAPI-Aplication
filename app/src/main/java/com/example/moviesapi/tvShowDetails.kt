@@ -28,33 +28,4 @@ class tvShowDetails : AppCompatActivity() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-
-
-        ApiByID.retrofitService.getTvShowsByID().enqueue(
-            object: Callback<TopRatedResponse> {
-                override fun onResponse(call: Call<TopRatedResponse>, response: Response<TopRatedResponse>) {
-                    Log.i("Retrofit", response.body().toString())
-
-                    response.body()?.results?.let {
-                        configureTvShowsList(it)
-                    }
-                }
-
-                override fun onFailure(call: Call<TopRatedResponse>, t: Throwable) {
-                    Log.i("Retrofit", t.message.toString())
-                }
-            }
-        )
-    }
-
-    fun configureTvShowsList(data: List<TVShow>) {
-        val adapter = TvShowAdapter(dataSet = data.toTypedArray()) { selectedId ->
-            val miIntent = Intent(this, tvShowDetails::class.java)
-            // Este parametro lo debe recuperar en la otra activity
-            miIntent.putExtra("showId", selectedId)
-        }
-    }
-
 }
