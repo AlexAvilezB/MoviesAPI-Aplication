@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 
 data class TvShowIdResponse (
     val name: String,
-    val backdrop_path: String,
+    val backdrop_path: String? = null,
     val poster_path: String,
     val number_of_episodes: Int,
     val number_of_seasons: Int,

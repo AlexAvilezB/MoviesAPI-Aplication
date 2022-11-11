@@ -25,6 +25,7 @@ class TvShowIDAdapter(
         holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
         holder.overview_textView.text = dataSet.overview
 
+
     }
 
     override fun getItemCount(): Int {
