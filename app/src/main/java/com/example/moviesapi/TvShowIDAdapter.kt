@@ -6,26 +6,28 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class TvShowIDAdapter(
-    private val dataSet: Array<TvShowIdResponse>
+    private val dataSet: TvShowIdResponse
 ) : RecyclerView.Adapter<TvShowIDViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowIDViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.tvshows_items, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.tv_show_details_item, parent, false)
 
         return TvShowIDViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: TvShowIDViewHolder, position: Int) {
 
-        val item = dataSet[position]
+        val item = dataSet
 
         holder.setTVShowID(item)
-        holder.showName_textView.text = dataSet[position].name
+        holder.showName_textView.text = dataSet.name
+        holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
+        holder.overview_textView.text = dataSet.overview
 
     }
 
     override fun getItemCount(): Int {
-        return dataSet.size
+        return 1
     }
 }

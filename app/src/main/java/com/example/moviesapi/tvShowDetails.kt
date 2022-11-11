@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
@@ -44,7 +45,7 @@ class tvShowDetails : AppCompatActivity() {
     }
 
     fun configureTvShow(data: TvShowIdResponse) {
-        val adapter = TvShowIDAdapter(dataSet = data.toTypedArray())
+        val adapter = TvShowIDAdapter(dataSet = data)
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
 

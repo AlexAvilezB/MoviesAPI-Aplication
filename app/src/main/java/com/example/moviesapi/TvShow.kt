@@ -8,6 +8,7 @@ data class TvShowIdResponse (
     val poster_path: String,
     val number_of_episodes: Int,
     val number_of_seasons: Int,
+    val overview: String,
     val genres: List<Categories>
 )
 
