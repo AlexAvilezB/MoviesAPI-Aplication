@@ -25,9 +25,14 @@ class TvShowIDAdapter(
         holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
         holder.overview_textView.text = dataSet.overview
         holder.showSeasons_textView.text = dataSet.number_of_seasons.toString()
-        //holder.Categories_textView.text = dataSet.genres.toString()
 
+        var genre = ""
 
+        for (Categories in dataSet.genres) {
+            genre += Categories.name + ", "
+        }
+
+        holder.Categories_textView.text = genre.dropLast(2)
 
 
 
