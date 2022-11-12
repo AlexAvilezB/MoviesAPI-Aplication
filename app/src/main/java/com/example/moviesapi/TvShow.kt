@@ -26,6 +26,5 @@ data class TopRatedResponse (
 data class TVShow (
     val id: Int,
     val name: String,
-    val first_air_date: String,
     val poster_path: String
 )

@@ -69,13 +69,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/series_backdrop" />
 
             <TextView
-                android:id="@+id/Seasons_textView"
-                android:layout_width="108dp"
-                android:layout_height="29dp"
+                android:id="@+id/Categories_textView"
+                android:layout_width="219dp"
+                android:layout_height="28dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/mulish_bold"
-                android:text="Seasons:"
+                android:text="Categories:"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="normal"
@@ -83,17 +83,29 @@
                 app:layout_constraintTop_toBottomOf="@+id/showName_textView" />
 
             <TextView
+                android:id="@+id/Seasons_textView"
+                android:layout_width="108dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/mulish_bold"
+                android:text="Seasons:"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/movie_poster_card"
+                app:layout_constraintTop_toBottomOf="@+id/Categories_textView" />
+
+            <TextView
                 android:id="@+id/showSeasons_textView"
                 android:layout_width="108dp"
                 android:layout_height="29dp"
-                android:layout_marginTop="8dp"
                 android:fontFamily="@font/mulish_bold"
                 android:text="Seasons"
                 android:textColor="@android:color/white"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toEndOf="@+id/Seasons_textView"
-                app:layout_constraintTop_toBottomOf="@+id/showName_textView" />
+                app:layout_constraintTop_toBottomOf="@+id/Categories_textView" />
 
 
             <TextView

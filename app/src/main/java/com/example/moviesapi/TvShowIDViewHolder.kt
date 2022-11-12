@@ -13,6 +13,7 @@ class TvShowIDViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
     val showEpisodes_textView: TextView = itemView.findViewById(R.id.showEpisodes_textView)
     val showSeasons_textView: TextView = itemView.findViewById((R.id.showSeasons_textView))
     val overview_textView: TextView = itemView.findViewById(R.id.overview_textView)
+    val Categories_textView: TextView = itemView.findViewById(R.id.Categories_textView)
 
     fun setTVShowID(tvShowId: TvShowIdResponse){
         Glide.with(ShowPoster.context).load("https://image.tmdb.org/t/p/w500" + tvShowId.poster_path).into(ShowPoster)

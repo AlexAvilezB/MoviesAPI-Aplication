@@ -33,7 +33,7 @@ interface ApiService {
     fun getTvShows(): Call<TopRatedResponse> // Devuelve una objeto con el detalle
 
     @GET("tv/{show}?api_key=${TOKEN}")
-    fun getTvShowsByID(@Path("show") show: Int): Call<TvShowIdResponse> // Devuelve una objeto con el detalle
+    fun getTvShowsByID(@Path("show") show: Int): Call<TvShowIdResponse> // Devuelve una objeto con el detalle por id
 
 }
 
