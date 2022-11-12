@@ -24,6 +24,7 @@ class TvShowIDAdapter(
         holder.showName_textView.text = dataSet.name
         holder.showEpisodes_textView.text = dataSet.number_of_episodes.toString()
         holder.overview_textView.text = dataSet.overview
+        holder.showSeasons_textView.text = dataSet.number_of_seasons.toString()
 
 
     }

@@ -15,6 +15,7 @@
         android:fontFamily="@font/mulish_bold"
         android:padding="10dp"
         android:text="Home"
+        android:layout_marginLeft="8dp"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"/>
@@ -25,7 +26,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/mulish_bold"
         android:padding="10dp"
-        android:text="Tv Shows-Top rated"
+        android:layout_marginLeft="8dp"
+        android:text="Top Rated - TV Shows"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />

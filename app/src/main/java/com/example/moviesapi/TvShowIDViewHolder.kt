@@ -11,6 +11,7 @@ class TvShowIDViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
     val ShowPoster: ImageView = itemView.findViewById(R.id.ShowPoster)
     val series_backdrop: ImageView = itemView.findViewById(R.id.series_backdrop)
     val showEpisodes_textView: TextView = itemView.findViewById(R.id.showEpisodes_textView)
+    val showSeasons_textView: TextView = itemView.findViewById((R.id.showSeasons_textView))
     val overview_textView: TextView = itemView.findViewById(R.id.overview_textView)
 
     fun setTVShowID(tvShowId: TvShowIdResponse){
