@@ -148,7 +148,6 @@
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom" />
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.core.widget.NestedScrollView>
