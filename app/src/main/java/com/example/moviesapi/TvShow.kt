@@ -1,7 +1,5 @@
 package com.example.moviesapi
 
-import com.squareup.moshi.Json
-
 data class TvShowIdResponse (
     val name: String,
     val backdrop_path: String? = null,

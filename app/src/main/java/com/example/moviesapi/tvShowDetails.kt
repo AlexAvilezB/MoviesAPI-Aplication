@@ -21,14 +21,14 @@ class tvShowDetails : AppCompatActivity() {
         val intent : Intent = getIntent()
         val show = intent.getIntExtra("showId", 0)
 
-        variable.serie_id = show
+        Variable.serie_id = show
 
     }
 
     override fun onResume() {
         super.onResume()
 
-        Api.retrofitService.getTvShowsByID(variable.serie_id).enqueue(
+        Api.retrofitService.getTvShowsByID(Variable.serie_id).enqueue(
             object: Callback<TvShowIdResponse> {
                 override fun onResponse(call: Call<TvShowIdResponse>, response: Response<TvShowIdResponse>) {
                     Log.i("Retrofit", response.body().toString())
