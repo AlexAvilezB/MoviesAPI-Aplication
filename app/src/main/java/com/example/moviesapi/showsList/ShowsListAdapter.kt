@@ -27,7 +27,5 @@ class ShowsListAdapter(
         }
     }
 
-    override fun getItemCount(): Int {
-        return dataSet.size
-    }
+    override fun getItemCount(): Int = dataSet.size
 }

@@ -22,7 +22,5 @@ class ShowDetailAdapter(
         holder.setTVShow(item)
     }
 
-    override fun getItemCount(): Int {
-        return 1
-    }
+    override fun getItemCount(): Int = 1
 }

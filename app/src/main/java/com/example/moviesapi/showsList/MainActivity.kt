@@ -48,9 +48,10 @@ class MainActivity : AppCompatActivity() {
     fun configureTvShowsList(data: List<TVShow>) {
         val adapter = ShowsListAdapter(dataSet = data.toTypedArray()) { selectedId ->
 
-            val miIntent = Intent(this, ShowDetailActivity::class.java)
-            miIntent.putExtra("showId", selectedId)
-            startActivity(miIntent)
+            val showDetailIntent = Intent(this, ShowDetailActivity::class.java)
+
+            showDetailIntent.putExtra("showId", selectedId)
+            startActivity(showDetailIntent)
         }
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
