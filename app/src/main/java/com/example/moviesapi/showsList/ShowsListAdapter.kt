@@ -1,34 +1,29 @@
-package com.example.moviesapi
+package com.example.moviesapi.showsList
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesapi.R
+import com.example.moviesapi.data.*
 
-class TvShowAdapter(
+class ShowsListAdapter(
     private val dataSet: Array<TVShow>,
     private val onTap: (Int) -> Unit,
-) : RecyclerView.Adapter<TvShowViewHolder>() {
+) : RecyclerView.Adapter<ShowsListViewHolder>() {
 
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowsListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.tvshows_items, parent, false)
 
-        return TvShowViewHolder(view)
+        return ShowsListViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: TvShowViewHolder, position: Int) {
-
+    override fun onBindViewHolder(holder: ShowsListViewHolder, position: Int) {
         val item = dataSet[position]
 
         holder.setTVShow(item)
-        holder.nameTextView.text = dataSet[position].name
 
         holder.itemView.setOnClickListener {
-            Log.i("OnTap", "Did tap on item with id: " + item.id)
-
             onTap(item.id)
-
         }
     }
 

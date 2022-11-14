@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.15489130434782608" />
         <entry key="..\:/Users/JULIANA/Desktop/DA V/MoviesAPI-Aplication/app/src/main/res/drawable/splash_screen.xml" value="0.13" />
         <entry key="..\:/Users/JULIANA/Desktop/DA V/MoviesAPI-Aplication/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/JULIANA/Desktop/DA V/MoviesAPI-Aplication/app/src/main/res/layout/activity_show_detail.xml" value="0.13055555555555556" />
@@ -16,6 +17,7 @@
         <entry key="..\:/Users/alean/OneDrive/Escritorio/UNP Alex/Practicas/flutter/MoviesAPI/app/src/main/res/layout/tv_show_details_item.xml" value="0.22" />
         <entry key="..\:/Users/alean/OneDrive/Escritorio/UNP Alex/Practicas/flutter/MoviesAPI/app/src/main/res/layout/tvshow_detail_item.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/alean/OneDrive/Escritorio/UNP Alex/Practicas/flutter/MoviesAPI/app/src/main/res/layout/tvshows_items.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/tv_show_details_item.xml" value="0.2513586956521739" />
       </map>
     </option>
   </component>

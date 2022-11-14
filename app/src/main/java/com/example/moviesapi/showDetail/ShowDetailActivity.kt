@@ -1,57 +1,55 @@
-package com.example.moviesapi
+package com.example.moviesapi.showDetail
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
 import android.util.Log
-import android.widget.TextView
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moviesapi.R
+import com.example.moviesapi.data.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class tvShowDetails : AppCompatActivity() {
+class ShowDetailActivity : AppCompatActivity() {
+
+    var showId = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tv_show_details)
 
         val intent : Intent = getIntent()
-        val show = intent.getIntExtra("showId", 0)
 
-        Variable.serie_id = show
-
+        showId = intent.getIntExtra("showId", 0)
     }
 
     override fun onResume() {
         super.onResume()
 
-        Api.retrofitService.getTvShowsByID(Variable.serie_id).enqueue(
-            object: Callback<TvShowIdResponse> {
-                override fun onResponse(call: Call<TvShowIdResponse>, response: Response<TvShowIdResponse>) {
+        Api.service.getTvShowsByID(showId).enqueue(
+            object: Callback<ShowDetailResponse> {
+
+                override fun onResponse(call: Call<ShowDetailResponse>, response: Response<ShowDetailResponse>) {
                     Log.i("Retrofit", response.body().toString())
 
                     response.body()?.let {
                         configureTvShow(it)
                     }
-
                 }
 
-                override fun onFailure(call: Call<TvShowIdResponse>, t: Throwable) {
+                override fun onFailure(call: Call<ShowDetailResponse>, t: Throwable) {
                     Log.i("Retrofit", t.message.toString())
                 }
             }
         )
     }
 
-    fun configureTvShow(data: TvShowIdResponse) {
-        val adapter = TvShowIDAdapter(dataSet = data)
+    fun configureTvShow(data: ShowDetailResponse) {
+        val adapter = ShowDetailAdapter(dataSet = data)
 
         val recyclerView: RecyclerView = findViewById(R.id.tvShows_recycler_view)
 
         recyclerView.adapter = adapter
     }
-
 }
